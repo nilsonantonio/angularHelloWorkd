@@ -1,0 +1,28 @@
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+    .container{
+        background-color: #00b3ee;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .container{
+        background-color: #67b168;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container{
+        background-color: #f8efc0;
+    }
+}
+
+.azul {
+    color: blue;
+}
+
+.vermelho {
+    color: red;
+}

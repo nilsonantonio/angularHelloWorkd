@@ -1,0 +1,1 @@
+angular.module('helloworld',['ngMessages', 'toastr', 'ui.grid']);//declaração do module principal
