@@ -25,8 +25,10 @@
                 columnDefs: [
                     {field: 'nome', displayName: 'Nome', width:200},
                     {field: 'sobrenome', displayName: 'Sobrenome'},
-                    {field: 'nascimento', displayName: 'Data nascimento', width:150, cellTemplate: 'app/template/cell-template-date.html'},
-                    {field: 'acao', displayName: 'Ações', width:150, cellTemplate: 'app/template/cell-template-acao.html'}
+                    {field: 'nascimento', displayName: 'Data nascimento',
+                        width:150, cellTemplate: 'app/template/cell-template-date.html'},
+                    {field: 'acao', displayName: 'Ações',
+                        width:150, cellTemplate: 'app/template/cell-template-acao.html'}
                 ],
                 rowTemplate: 'app/template/row-template.html'
             };
@@ -88,7 +90,7 @@
         }
 
         vm.dispararEvento = function() {
-            $rootScope.$broadcast('testeBroadcastEvent', {nome:'Nilson'})
+            $rootScope.$broadcast('testeBroadcastEvent', {nome:'Nilson'});
         };
 
         $rootScope.$on('$stateChangeStart', stateChangeStart);

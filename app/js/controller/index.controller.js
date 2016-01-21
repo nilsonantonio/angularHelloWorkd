@@ -3,13 +3,15 @@
 
     angular.module('helloworld').controller('IndexController', IndexController);
 
-    function IndexController(){
+    IndexController.$inject = ['AlertService'];
+
+    function IndexController(AlertService){
         var vm = this;
         vm.nome = 'Nilson';
         vm.testeFuncao = testeFuncao;
 
         function testeFuncao(){
-            alert('Olá ' + vm.nome);
+            AlertService.showSucess('Olá ' + vm.nome);
         }
     }
 })();
