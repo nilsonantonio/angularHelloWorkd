@@ -25,14 +25,16 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
-    <script src="app/js/helloworld-config.js"></script>
-    <script src="app/js/controller/ui-grid-controller.js"></script>
+    <script src="app/js/helloworld.module.js"></script>
+    <script src="app/js/helloworld.config.js"></script>
+    <script src="app/js/controller/ui-grid.controller.js"></script>
     <script src="arquitetura/service/alert-service.js"></script>
     <script src="arquitetura/filter/filter-maiusculo.js"></script>
 </head>
 <body ng-app="helloworld">
-<div ng-controller="UIGridController" class="container">
+<div ng-controller="UIGridController as vmIndex" class="container">
 
+    <button class="btn btn-default" ng-click="vmIndex.dispararEvento()">Dispara Evento</button>
     <button class="btn btn-default" ui-sref="home">Home</button>
     <button class="btn btn-info" ui-sref="menu">Menu</button>
     <button class="btn btn-warning" ui-sref="cadastroPessoa">Cadastro pessoa</button>

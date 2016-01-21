@@ -1,7 +1,9 @@
-<div style="width: 200px; height: 200px; background-color: #c9dde1" ng-controller="PesquisaPessoaController">
+<div style="width: 200px; height: 200px; background-color: #c9dde1" ng-controller="PesquisaPessoaController as vm">
 
     Pesquisa
 
-    {{nome}}
+    <button ng-click="vm.redirecionarParaCadastro()" class="btn btn-default">Cadastro</button>
+
+    {{vm.nome}}
 
 </div>
