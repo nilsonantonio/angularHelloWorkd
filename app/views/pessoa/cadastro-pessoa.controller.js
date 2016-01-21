@@ -3,8 +3,7 @@
 
     angular.module('helloworld').controller('CadastroPessoaController', CadastroPessoaController);
 
-    CadastroPessoaController.$inject = ['$scope', '$stateParams', '$state'];
-
+    /* @ngInject */
     function CadastroPessoaController($scope, $stateParams, $state) {
         var vm = this;
         vm.nome = 'Cadastro Pessoa Controller';

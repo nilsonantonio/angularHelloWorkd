@@ -1,9 +1,13 @@
-angular.module('helloworld').factory('ParametrosAplicacao', ParametrosAplicacao);
+(function () {
+    'use strict';
 
-function ParametrosAplicacao() {
-    return {
-        nomeDoUsuario: '',
-        email: '',
-        logado: false
-    };
-}
+    angular.module('helloworld').factory('ParametrosAplicacao', ParametrosAplicacao);
+
+    function ParametrosAplicacao() {
+        return {
+            nomeDoUsuario: '',
+            email: '',
+            logado: false
+        };
+    }
+})();

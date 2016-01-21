@@ -3,6 +3,7 @@
 
     angular.module('helloworld').controller('IndexController3', IndexController3);
 
+    /* @ngInject */
     function IndexController3(){
         var vm = this;
         vm.listaDePessoas = [];

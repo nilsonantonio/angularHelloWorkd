@@ -3,6 +3,7 @@
 
     angular.module('helloworld').controller('IndexController2', IndexController2);
 
+    /* @ngInject */
     function IndexController2(){
         var vm = this;
         vm.nome = 'Nilson';

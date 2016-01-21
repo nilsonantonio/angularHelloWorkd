@@ -3,8 +3,7 @@
 
     angular.module('helloworld').controller('IndexController', IndexController);
 
-    IndexController.$inject = ['AlertService'];
-
+    /* @ngInject */
     function IndexController(AlertService){
         var vm = this;
         vm.nome = 'Nilson';

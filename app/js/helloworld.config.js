@@ -1,10 +1,9 @@
-(function(){
+(function () {
     'use strict';
 
     angular.module('helloworld').config(config);//declaração do module principal
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider'];
-
+    /* @ngInject */
     function config($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/home');
