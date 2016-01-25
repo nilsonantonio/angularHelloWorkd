@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('helloworld').controller('MessagesController', MessagesController);
+    angular.module('helloworld.controller').controller('MessagesController', MessagesController);
 
     /* @ngInject */
     function MessagesController($timeout, AlertService, $filter) {

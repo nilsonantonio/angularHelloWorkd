@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('helloworld').controller('IndexController2', IndexController2);
+    angular.module('helloworld.controller').controller('IndexController2', IndexController2);
 
     /* @ngInject */
     function IndexController2(){

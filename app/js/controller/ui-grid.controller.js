@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('helloworld').controller('UIGridController', UIGridController);
+    angular.module('helloworld.controller').controller('UIGridController', UIGridController);
 
     /* @ngInject */
     function UIGridController($timeout, AlertService, $filter, $rootScope, $state) {
