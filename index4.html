@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower_components/angular-toastr-master/dist/angular-toastr.css"/>
     <link rel="stylesheet" href="app/css/media-queries.css"/>
+    <link rel="stylesheet" href="arquitetura/style/ca-style.css"/>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -25,18 +27,66 @@
 
     <script src="app/js/helloworld.module.js"></script>
     <script src="app/js/helloworld.config.js"></script>
+    <script src="arquitetura/service/alert-service.js"></script>
     <script src="arquitetura/directive/ca-span/ca-span.directive.js"></script>
     <script src="arquitetura/directive/ca-input-text/ca-input-text.directive.js"></script>
+    <script src="arquitetura/directive/ca-crud/ca-crud.directive.js"></script>
+    <script src="arquitetura/directive/ca-panel/ca-panel.directive.js"></script>
+    <script src="arquitetura/directive/ca-enter/ca-enter.directive.js"></script>
+    <script src="bower_components/angular-keycode/angular-keycode.js"></script>
     <script src="app/js/controller/index.controller4.js"></script>
 </head>
 <body ng-app="helloworld">
     <div ng-controller="IndexController4 as vmIndex" class="container">
 
-        <ca-span texto="Nilson Antonio"></ca-span>
+        <!--<ca-span texto="Nilson Antonio"></ca-span>
         <div class="row">
             <ca-input-text label="Formulário Pessoa" colspan="4" ng-model="vmIndex.entidade.nome" ng-required="true"></ca-input-text>
             <ca-input-text label="SobreNome" colspan="4" ng-model="vmIndex.entidade.sobrenome"></ca-input-text>
-        </div>
+        </div>-->
+
+        <ca-crud titulo="Cadastro Pessoa" salvar="vmIndex.salvar()" limpar="vmIndex.limpar()" excluir="vmIndex.excluir()">
+            <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
+            <ca-input-text label="SobreNome" colspan="4" ng-model="vmIndex.entidade.sobrenome"></ca-input-text>
+        </ca-crud>
+        <br/><br/>
+        <ca-panel titulo="Painel Teste">
+            <panel-body>
+                <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome" ng-required="true"></ca-input-text>
+            </panel-body>
+        </ca-panel>
+        <ca-panel titulo="Painel Teste" tipo-class="success" ca-enter="vmIndex.funcaoEnter()">
+            <panel-body>
+                <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
+            </panel-body>
+            <panel-footer>
+                <button class="btn btn-primary">footer</button>
+            </panel-footer>
+        </ca-panel>
+        <ca-panel titulo="Painel Teste" tipo-class="info">
+            <panel-body>
+                <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
+            </panel-body>
+            <panel-footer>
+                <button class="btn btn-primary">footer</button>
+            </panel-footer>
+        </ca-panel>
+        <ca-panel titulo="Painel Teste" tipo-class="warning">
+            <panel-body>
+                <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
+            </panel-body>
+            <panel-footer>
+                <button class="btn btn-primary">footer</button>
+            </panel-footer>
+        </ca-panel>
+        <ca-panel titulo="Painel Teste" tipo-class="danger">
+            <panel-body>
+                <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
+            </panel-body>
+            <panel-footer>
+                <button class="btn btn-primary">footer</button>
+            </panel-footer>
+        </ca-panel>
 
     </div>
 </body>

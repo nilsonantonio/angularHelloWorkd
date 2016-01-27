@@ -98,6 +98,28 @@
                         'build/source.css'
                     ]
                 }
+            },
+
+            ngdocs: {
+                options: {
+                    dest: 'docs',
+                    title: 'Docs',
+                    html5Mode: false
+                },
+                delta: {
+                    src: [
+                        'app/**/*.js',
+                        'arquitetura/**/*.js'
+                    ]
+                }
+            },
+
+            less: {
+                app: {
+                    files: {
+                        'arquitetura/style/ca-style.css': 'arquitetura/style/ca-style.less'
+                    }
+                }
             }
         });
 
@@ -106,6 +128,7 @@
             'copy',
             'ngAnnotate',
             'concat',
+            'less',
             'autoprefixer',
             'uglify',
             'cssmin',

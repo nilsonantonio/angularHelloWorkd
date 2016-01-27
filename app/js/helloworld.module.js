@@ -18,6 +18,7 @@
         'helloworld.service',
         'helloworld.factory',
         'helloworld.directive',
-        'helloworld.filter'
+        'helloworld.filter',
+        'angular-keycode'
     ]);//declaração do module principal
 })();
