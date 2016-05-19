@@ -21,21 +21,29 @@
 
     function caInputText(){
         return {
-            require: ['ngModel'],
+            require: ['^form', 'ngModel'],
             restrict: 'E',
             templateUrl: 'arquitetura/directive/ca-input-text/ca-input-text.directive.html',
             scope: {
                 label: '@',
                 colspan: '@',
                 ngModel: '=',
-                ngRequired: '=?'
+                ngRequired: '=?',
+                ngMaxlength: '@',
+                ngMinlength: '@'
             },
-            link: function(scope, element, attrs) {
-                if(!attrs.colspan){
-                    attrs.colspan = 3;
-                }
-                scope.myColspan = 'col-sm-' + attrs.colspan;
-            }
+            link: link
         };
+
+        function link(scope, element, attrs, requires) {
+            scope.formControl = requires[0];
+            scope.inputName = 'inputText'+scope.$id;
+
+            if(!attrs.colspan){
+                attrs.colspan = 3;
+            }
+
+            scope.myColspan = 'col-sm-' + attrs.colspan;
+        }
     }
 })();

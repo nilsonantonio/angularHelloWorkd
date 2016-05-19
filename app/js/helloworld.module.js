@@ -19,6 +19,7 @@
         'helloworld.factory',
         'helloworld.directive',
         'helloworld.filter',
-        'angular-keycode'
+        'angular-keycode',
+        'ui.bootstrap'
     ]);//declaração do module principal
 })();

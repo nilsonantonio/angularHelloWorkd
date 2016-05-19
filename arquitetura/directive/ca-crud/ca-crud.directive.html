@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">Cadastro de pessoa</div>
     <div class="panel-body">
-        <form name="caFormCrud" ng-submit="salvar()" novalidate>
+        <form name="caFormCrud" ng-submit="onSalvar()" novalidate>
 
             <div class="row">
                 <div ng-transclude></div>
@@ -13,7 +13,7 @@
                         <i class="fa fa-save"></i>
                         Salvar
                     </button>
-                    <button class="btn btn-default" type="button" ng-click="limpar()">
+                    <button class="btn btn-default" type="button" ng-click="onLimpar()">
                         <i class="fa fa-eraser"></i>
                         Limpar
                     </button>

@@ -45,16 +45,33 @@
             <ca-input-text label="SobreNome" colspan="4" ng-model="vmIndex.entidade.sobrenome"></ca-input-text>
         </div>-->
 
-        <ca-crud titulo="Cadastro Pessoa" salvar="vmIndex.salvar()" limpar="vmIndex.limpar()" excluir="vmIndex.excluir()">
-            <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
-            <ca-input-text label="SobreNome" colspan="4" ng-model="vmIndex.entidade.sobrenome"></ca-input-text>
+        <ca-crud titulo="Cadastro Pessoa"
+                salvar="vmIndex.salvar()"
+                limpar="vmIndex.limpar()"
+                excluir="vmIndex.excluir()">
+
+            <ca-input-text label="Nome"
+                           colspan="4"
+                           ng-model="vmIndex.entidade.nome"
+                           ng-maxlength="10"
+                           ng-minlength="5"
+                           ng-required="true"></ca-input-text>
+
+            <ca-input-text label="SobreNome"
+                           colspan="4"
+                           ng-model="vmIndex.entidade.sobrenome"></ca-input-text>
         </ca-crud>
         <br/><br/>
+
+        <form>
         <ca-panel titulo="Painel Teste">
             <panel-body>
                 <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome" ng-required="true"></ca-input-text>
             </panel-body>
         </ca-panel>
+
+        <br/>
+
         <ca-panel titulo="Painel Teste" tipo-class="success" ca-enter="vmIndex.funcaoEnter()">
             <panel-body>
                 <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
@@ -63,6 +80,9 @@
                 <button class="btn btn-primary">footer</button>
             </panel-footer>
         </ca-panel>
+
+        <br/>
+
         <ca-panel titulo="Painel Teste" tipo-class="info">
             <panel-body>
                 <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
@@ -71,6 +91,9 @@
                 <button class="btn btn-primary">footer</button>
             </panel-footer>
         </ca-panel>
+
+        <br/>
+
         <ca-panel titulo="Painel Teste" tipo-class="warning">
             <panel-body>
                 <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
@@ -79,6 +102,9 @@
                 <button class="btn btn-primary">footer</button>
             </panel-footer>
         </ca-panel>
+
+        <br/>
+
         <ca-panel titulo="Painel Teste" tipo-class="danger">
             <panel-body>
                 <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome"></ca-input-text>
@@ -87,7 +113,8 @@
                 <button class="btn btn-primary">footer</button>
             </panel-footer>
         </ca-panel>
-
+        </form>
     </div>
+
 </body>
 </html>
